@@ -1,0 +1,40 @@
+<RootNode Name="Classes" IsRemovable="0">
+	<FrameNode Name="MainFrame" IsRemovable="0" Title="Toto" Resizable="1" Width="400" Height="400" BackColor="FF0000" BaseClass="MdzFrame">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="5365744261636B436F6C6F72284D647A436F6C6F723A3A476574537973436F6C6F722829293B0D0A0D0A6C61796F75745F6C6162656C2E53657454657874284D647A537472696E673A3A466F726D617428222564222C206C61796F75745F736C696465722E47657456616C7565282929293B0D0A0D0A6C61796F75745F6C6973742E4164644974656D2822427269676974746522293B0D0A6C61796F75745F6C6973742E4164644974656D28225175656E74696E22293B0D0A6C61796F75745F6C6973742E4164644974656D28224D61726322293B0D0A0D0A">
+		</MethodNode>
+		<LayoutNode Name="layout" IsRemovable="1" Left="50" Top="50">
+			<CheckBoxNode Name="check1" IsRemovable="1" LayoutMode="RIGHT" LayoutSpacing="10" LayoutAction="SAVE" Width="100" Height="20" Enable="1" Font="Microsoft Sans Serif,8,0" Caption="Check1" Checked="0" Type="MdzCheckBox" ArraySize="0">
+			</CheckBoxNode>
+			<CheckBoxNode Name="check2" IsRemovable="1" LayoutMode="BOTTOM_LEFT" LayoutSpacing="10" LayoutAction="NONE" Width="100" Height="20" Enable="1" Font="Microsoft Sans Serif,8,0" Caption="Check2" Checked="0" Type="MdzCheckBox" ArraySize="0">
+			</CheckBoxNode>
+			<LayoutBorderNode Name="Border" IsRemovable="1" Spacing="10" Title="">
+			</LayoutBorderNode>
+			<ListBoxNode Name="list" IsRemovable="1" LayoutMode="RIGHT" LayoutSpacing="30" LayoutAction="RESTORE" Width="100" Height="100" Enable="1" Font="Microsoft Sans Serif,10,0" Sorted="1" MultiSelection="0" Type="MdzListBox" ArraySize="0">
+				<CallbackNode Name="OnDblClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="5452414345286C61796F75745F6C6973742E47657453656C4974656D2829293B0D0A">
+				</CallbackNode>
+			</ListBoxNode>
+			<LayoutBorderNode Name="Border" IsRemovable="1" Spacing="20" Title="Hello">
+			</LayoutBorderNode>
+			<SliderNode Name="slider" IsRemovable="1" LayoutMode="NEXT_LINE" LayoutSpacing="50" LayoutAction="SAVE" Width="200" Height="25" Enable="1" Border="0" MinValue="0" MaxValue="100" InitValue="50" Type="MdzSlider" ArraySize="-842150451">
+				<CallbackNode Name="OnSelChange" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="6C61796F75745F6C6162656C2E53657454657874284D647A537472696E673A3A466F726D617428222564222C206C61796F75745F736C696465722E47657456616C7565282929293B">
+				</CallbackNode>
+			</SliderNode>
+			<LabelNode Name="label" IsRemovable="1" LayoutMode="BOTTOM_LEFT" LayoutSpacing="10" LayoutAction="NONE" Width="100" Height="20" Enable="1" Font="Microsoft Sans Serif,12,2" Text="" Alignment="CENTER" TextColor="FF" Opaque="1" BackColor="FFFFFF" Border="0" Type="MdzLabel" ArraySize="-842150451">
+			</LabelNode>
+			<LayoutBorderNode Name="Border" IsRemovable="1" Spacing="20" Title="">
+			</LayoutBorderNode>
+		</LayoutNode>
+		<MenuBarNode Name="menuBar" IsRemovable="1" Type="MdzMenuBar" ArraySize="0">
+			<MenuNode Name="file" IsRemovable="1" Caption="Fichier" Type="MdzMenu" ArraySize="0">
+				<MenuItemNode Name="exit" IsRemovable="1" Caption="Quitter" Enabled="1" Checked="0" Type="MdzMenuItem" ArraySize="0">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="0D0A436C6F736528293B0D0A0D0A0D0A0D0A0D0A0D0A0D0A">
+					</CallbackNode>
+				</MenuItemNode>
+			</MenuNode>
+		</MenuBarNode>
+	</FrameNode>
+</RootNode>
+<RESOURCES INDEX="1">
+</RESOURCES>

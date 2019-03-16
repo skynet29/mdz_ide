@@ -1,0 +1,20 @@
+<RootNode Name="Classes" IsRemovable="0">
+	<FrameNode Name="MainFrame" IsRemovable="0" Title="My Application" Resizable="1" Width="400" Height="400" BackColor="FFFFFF" BaseClass="MdzFrame">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="746869732D3E536574436C69656E744374726C2870616E656C293B0D0A70616E656C2E536574546F704374726C28746F7050616E656C293B0D0A70616E656C2E536574426F74746F6D4374726C286275696C6450616E656C293B0D0A6275696C6450616E656C2E5365744261636B436F6C6F72284D647A436F6C6F723A3A4B5F59454C4C4F57293B0D0A746F7050616E656C2E53657452696768744374726C286461746150616E656C293B0D0A6461746150616E656C2E5365744261636B436F6C6F72284D647A436F6C6F723A3A4B5F475245454E293B0D0A746F7050616E656C2E5365744C6566744374726C287472656550616E656C293B0D0A7472656550616E656C2E5365744261636B436F6C6F72284D647A436F6C6F723A3A4B5F4359414E293B">
+		</MethodNode>
+		<PanelNode Name="buildPanel" IsRemovable="1" Left="10" Top="10" Width="100" Height="100" Enable="1" Border="0" BackColor="FFFFFF" Type="MdzPanel" ArraySize="0">
+		</PanelNode>
+		<PanelNode Name="dataPanel" IsRemovable="1" Left="10" Top="10" Width="100" Height="100" Enable="1" Border="0" BackColor="FFFFFF" Type="MdzPanel" ArraySize="0">
+		</PanelNode>
+		<VarNode Name="panel" IsRemovable="1" Type="MdzVertDividerPanel" ArraySize="0">
+		</VarNode>
+		<VarNode Name="topPanel" IsRemovable="1" Type="MdzHorzDividerPanel" ArraySize="0">
+		</VarNode>
+		<PanelNode Name="treePanel" IsRemovable="1" Left="10" Top="10" Width="100" Height="100" Enable="1" Border="0" BackColor="FFFFFF" Type="MdzPanel" ArraySize="0">
+		</PanelNode>
+	</FrameNode>
+</RootNode>
+<RESOURCES INDEX="1">
+</RESOURCES>

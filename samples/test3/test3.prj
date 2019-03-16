@@ -1,0 +1,36 @@
+<RootNode Name="Classes" IsRemovable="0">
+	<FrameNode Name="MainFrame" IsRemovable="0" Title="My Application" Resizable="1" Width="400" Height="400" BackColor="FFFF" BaseClass="MdzFrame">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<LayoutNode Name="layout" IsRemovable="1" Left="10" Top="10">
+			<ListBoxNode Name="list" IsRemovable="1" LayoutMode="RIGHT" LayoutSpacing="10" LayoutAction="NONE" Width="100" Height="100" Enable="1" Font="Microsoft Sans Serif,8,0" Sorted="0" MultiSelection="0" Type="MdzListBox" ArraySize="0">
+				<CallbackNode Name="OnDblClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="4D647A5374644469616C6F673A3A53686F774D657373616765286C61796F75745F6C6973742E47657453656C4974656D2829293B">
+				</CallbackNode>
+			</ListBoxNode>
+			<ButtonNode Name="btnAdd" IsRemovable="1" LayoutMode="RIGHT" LayoutSpacing="10" LayoutAction="SAVE" Width="60" Height="25" Enable="1" Caption="Ajouter" Font="Microsoft Sans Serif,8,0" Bitmap="(None)" Type="MdzButton" ArraySize="0">
+				<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="4D647A537472696E6720737472203D204D647A5374644469616C6F673A3A53686F77496E70757428293B0D0A696620287374722E4765744C656E6774682829290D0A096C61796F75745F6C6973742E4164644974656D28737472293B0D0A090D0A">
+				</CallbackNode>
+			</ButtonNode>
+			<ButtonNode Name="btnRemove" IsRemovable="1" LayoutMode="BOTTOM_LEFT" LayoutSpacing="10" LayoutAction="NONE" Width="60" Height="25" Enable="1" Caption="Supprimer" Font="Microsoft Sans Serif,8,0" Bitmap="(None)" Type="MdzButton" ArraySize="0">
+				<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="696E7420696E646578203D206C61796F75745F6C6973742E47657453656C496E64657828293B0D0A69662028696E64657820213D202D31290D0A096C61796F75745F6C6973742E52656D6F76654974656D417428696E646578293B">
+				</CallbackNode>
+			</ButtonNode>
+			<PanelNode Name="panel" IsRemovable="1" LayoutMode="RIGHT" LayoutSpacing="10" LayoutAction="RESTORE" Width="200" Height="200" Enable="1" Border="1" BackColor="FFFFFF" Type="MdzPanel" ArraySize="0">
+				<CallbackNode Name="OnPaint" IsRemovable="1" Proto="MdzGraphic& graphic" RetValue="void" Type="-842150451" Code="677261706869632E536574436F6C6F72284D647A436F6C6F723A3A4B5F524544293B0D0A677261706869632E46696C6C4F76616C284D647A426F756E64732831302C2031302C203130302C2031303029293B0D0A677261706869632E536574436F6C6F72284D647A436F6C6F723A3A4B5F424C5545293B0D0A677261706869632E46696C6C52656374284D647A426F756E64732836302C2036302C203130302C2031303029293B">
+				</CallbackNode>
+			</PanelNode>
+		</LayoutNode>
+		<MenuBarNode Name="menuBar" IsRemovable="1" Type="MdzMenuBar" ArraySize="0">
+			<MenuNode Name="file" IsRemovable="1" Caption="Fichier" Type="MdzMenu" ArraySize="0">
+				<MenuItemNode Name="exit" IsRemovable="1" Caption="Quitter" Enabled="1" Checked="0" Bitmap="(None)" Shortcut="0" Type="MdzMenuItem" ArraySize="0">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="436C6F736528293B">
+					</CallbackNode>
+				</MenuItemNode>
+			</MenuNode>
+		</MenuBarNode>
+	</FrameNode>
+</RootNode>
+<RESOURCES INDEX="4">
+</RESOURCES>

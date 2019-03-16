@@ -1,0 +1,58 @@
+<RootNode Name="Classes" IsRemovable="0">
+	<FrameNode Name="MainFrame" IsRemovable="0" Title="MdiApp" Resizable="1" Width="400" Height="400" BackColor="FFFFFF" BaseClass="MdzFrame">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="536574436C69656E744374726C286D64694374726C293B0D0A6D64694374726C2E536574576E644D656E75286D656E754261725F77696E646F77293B">
+		</MethodNode>
+		<VarNode Name="mdiCtrl" IsRemovable="1" Type="MdzMdiCtrl" ArraySize="0">
+		</VarNode>
+		<MenuBarNode Name="menuBar" IsRemovable="1" Type="MdzMenuBar" ArraySize="-842150451">
+			<MenuNode Name="file" IsRemovable="1" Caption="File" Type="MdzMenu" ArraySize="-842150451">
+				<MenuItemNode Name="newChild" IsRemovable="1" Caption="New Child" Enabled="1" Checked="0" Bitmap="IDB_NEW" Type="MdzMenuItem" ArraySize="-842150451">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="4D647A4D64694368696C642A20704D64694368696C64203D206E6577204D794D64694368696C643B0D0A73746174696320696E7420694368696C64203D20313B0D0A704D64694368696C642D3E5365745469746C65284D647A537472696E673A3A466F726D617428224368696C642564222C20694368696C642B2B29293B0D0A0D0A6D64694374726C2E4372656174654368696C6428704D64694368696C64293B">
+					</CallbackNode>
+				</MenuItemNode>
+				<MenuSeparatorNode Name="Separator" IsRemovable="1">
+				</MenuSeparatorNode>
+				<MenuItemNode Name="exit" IsRemovable="1" Caption="Exit" Enabled="1" Checked="0" Bitmap="(None)" Type="MdzMenuItem" ArraySize="-842150451">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="436C6F736528293B">
+					</CallbackNode>
+				</MenuItemNode>
+			</MenuNode>
+			<MenuNode Name="window" IsRemovable="1" Caption="Fenetre" Type="MdzMenu" ArraySize="-842150451">
+				<MenuItemNode Name="cascade" IsRemovable="1" Caption="Cascade" Enabled="1" Checked="0" Bitmap="IDB_CASCADE" Type="MdzMenuItem" ArraySize="-842150451">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="6D64694374726C2E4361736361646528293B">
+					</CallbackNode>
+				</MenuItemNode>
+				<MenuItemNode Name="tileHorz" IsRemovable="1" Caption="Tile Horizontally" Enabled="1" Checked="0" Bitmap="IDB_TILEHORZ" Type="MdzMenuItem" ArraySize="-842150451">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="6D64694374726C2E54696C65486F72697A6F6E74616C6C7928293B">
+					</CallbackNode>
+				</MenuItemNode>
+				<MenuItemNode Name="tileVert" IsRemovable="1" Caption="Tile Vertically" Enabled="1" Checked="0" Bitmap="IDB_TILEVERT" Type="MdzMenuItem" ArraySize="-842150451">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="6D64694374726C2E54696C65566572746963616C6C7928293B">
+					</CallbackNode>
+				</MenuItemNode>
+				<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="6D656E754261725F77696E646F775F636173636164652E536574456E61626C6564286D64694374726C2E4765744163746976654368696C64282920213D204E554C4C293B0D0A6D656E754261725F77696E646F775F74696C65486F727A2E536574456E61626C6564286D64694374726C2E4765744163746976654368696C64282920213D204E554C4C293B0D0A6D656E754261725F77696E646F775F74696C65566572742E536574456E61626C6564286D64694374726C2E4765744163746976654368696C64282920213D204E554C4C293B">
+				</CallbackNode>
+			</MenuNode>
+		</MenuBarNode>
+	</FrameNode>
+	<ClassNode Name="MyMdiChild" IsRemovable="1" BaseClass="MdzMdiChild">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="536574436C69656E744374726C28656469746F72293B">
+		</MethodNode>
+		<TextAreaNode Name="editor" IsRemovable="1" Left="10" Top="10" Width="100" Height="100" Enable="1" Font="Microsoft Sans Serif,8,0" TabSize="4" Editable="1" Type="MdzTextArea" ArraySize="-842150451">
+		</TextAreaNode>
+	</ClassNode>
+</RootNode>
+<RESOURCES INDEX="5">
+	<BITMAP ID="IDB_CASCADE" FILENAME="cascade.bmp">
+	</BITMAP>
+	<BITMAP ID="IDB_TILEHORZ" FILENAME="tile_horz.bmp">
+	</BITMAP>
+	<BITMAP ID="IDB_TILEVERT" FILENAME="tile_vert.bmp">
+	</BITMAP>
+	<BITMAP ID="IDB_NEW" FILENAME="new.bmp">
+	</BITMAP>
+</RESOURCES>

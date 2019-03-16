@@ -1,0 +1,56 @@
+<RootNode Name="Classes" IsRemovable="0">
+	<FrameNode Name="MainFrame" IsRemovable="0" Title="My Application" Resizable="1" Width="400" Height="400" BackColor="FFFFFF" BaseClass="MdzFrame">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="536574436C69656E744374726C2870616E656C293B">
+		</MethodNode>
+		<DockBarNode Name="dockBar" IsRemovable="1" Type="MdzDockBar" ArraySize="0">
+			<ToolBarNode Name="toolbar1" IsRemovable="1" Break="1" Type="MdzToolBar" ArraySize="0">
+				<ToolButtonNode Name="new" IsRemovable="1" Bitmap="IDB_NEW" Style="BUTTON" ToolTips="" Type="MdzToolButton" ArraySize="0">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="545241434528224E657722293B0D0A0D0A0D0A">
+					</CallbackNode>
+				</ToolButtonNode>
+				<ToolButtonNode Name="open" IsRemovable="1" Bitmap="IDB_OPEN" Style="BUTTON" ToolTips="" Type="MdzToolButton" ArraySize="0">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="545241434528224F70656E22293B">
+					</CallbackNode>
+				</ToolButtonNode>
+				<ToolButtonNode Name="save" IsRemovable="1" Bitmap="IDB_SAVE" Style="BUTTON" ToolTips="" Type="MdzToolButton" ArraySize="0">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="545241434528225361766522293B">
+					</CallbackNode>
+				</ToolButtonNode>
+			</ToolBarNode>
+		</DockBarNode>
+		<PanelNode Name="panel" IsRemovable="1" Left="10" Top="10" Width="100" Height="100" Enable="1" Border="0" BackColor="FF00" Type="MdzPanel" ArraySize="0">
+			<LayoutNode Name="layout" IsRemovable="1" Left="10" Top="10">
+				<ButtonNode Name="button" IsRemovable="1" LayoutMode="RIGHT" LayoutSpacing="10" LayoutAction="NONE" Width="100" Height="100" Enable="1" Caption="button" Font="Microsoft Sans Serif,8,0" Bitmap="(None)" Type="MdzButton" ArraySize="0">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="4D794469616C6F6720646C673B0D0A646C672E4578656375746528293B">
+					</CallbackNode>
+				</ButtonNode>
+			</LayoutNode>
+		</PanelNode>
+	</FrameNode>
+	<DialogNode Name="MyDialog" IsRemovable="1" Title="MyDialog" Width="100" Height="100" BaseClass="MdzDialog">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="53657444656661756C74427574746F6E286C61796F75745F627574746F6E293B0D0A5061636B2831302C203130293B">
+		</MethodNode>
+		<MethodNode Name="OnFocus" IsRemovable="1" Proto="UINT bGotFocus" RetValue="void" Type="0" Code="6C61796F75745F746578742E52657175657374466F63757328293B">
+		</MethodNode>
+		<LayoutNode Name="layout" IsRemovable="1" Left="10" Top="10">
+			<TextFieldNode Name="text" IsRemovable="1" LayoutMode="RIGHT" LayoutSpacing="10" LayoutAction="NONE" Width="200" Height="20" Enable="1" Font="Microsoft Sans Serif,8,0" Text="" MaxChar="10" Password="0" DigitOnly="0" Type="MdzTextField" ArraySize="0">
+			</TextFieldNode>
+			<ButtonNode Name="button" IsRemovable="1" LayoutMode="BOTTOM_RIGHT" LayoutSpacing="10" LayoutAction="NONE" Width="60" Height="25" Enable="1" Caption="OK" Font="Microsoft Sans Serif,8,0" Bitmap="(None)" Type="MdzButton" ArraySize="0">
+				<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="436C6F73652854525545293B">
+				</CallbackNode>
+			</ButtonNode>
+		</LayoutNode>
+	</DialogNode>
+</RootNode>
+<RESOURCES INDEX="6">
+	<BITMAP ID="IDB_NEW" FILENAME="new.bmp">
+	</BITMAP>
+	<BITMAP ID="IDB_OPEN" FILENAME="open.bmp">
+	</BITMAP>
+	<BITMAP ID="IDB_SAVE" FILENAME="save.bmp">
+	</BITMAP>
+</RESOURCES>

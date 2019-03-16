@@ -1,0 +1,28 @@
+<RootNode Name="Classes" IsRemovable="0">
+	<FrameNode Name="MainFrame" IsRemovable="0" Title="Text Editor" Resizable="1" Width="400" Height="400" BackColor="FF0000" BaseClass="MdzFrame">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="536574436C69656E744374726C28656469746F72293B">
+		</MethodNode>
+		<TextAreaNode Name="editor" IsRemovable="1" Left="10" Top="10" Width="100" Height="100" Enable="1" Font="Courier New,11,0" TabSize="4" Editable="1" Type="MdzTextArea" ArraySize="-842150451">
+		</TextAreaNode>
+		<MenuBarNode Name="menuBar" IsRemovable="1" Type="MdzMenuBar" ArraySize="-842150451">
+			<MenuNode Name="file" IsRemovable="1" Caption="Fichier" Type="MdzMenu" ArraySize="-842150451">
+				<MenuItemNode Name="open" IsRemovable="1" Caption="Ouvrir..." Enabled="1" Checked="0" Bitmap="IDB_BITMAP1" Shortcut="1114191" Type="MdzMenuItem" ArraySize="-842150451">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="4D647A46696C654469616C6F6720646C673B0D0A646C672E41646446696C746572282254657874222C202274787422293B0D0A646C672E41646446696C7465722822416C6C222C20222A22293B0D0A69662028646C672E53686F774F70656E2829290D0A7B0D0A09656469746F722E4C6F616446726F6D46696C6528646C672E47657446756C6C506174684E616D652829293B0D0A7D">
+					</CallbackNode>
+				</MenuItemNode>
+				<MenuSeparatorNode Name="Separator" IsRemovable="1">
+				</MenuSeparatorNode>
+				<MenuItemNode Name="exit" IsRemovable="1" Caption="Quitter" Enabled="1" Checked="0" Bitmap="(None)" Shortcut="0" Type="MdzMenuItem" ArraySize="-842150451">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="436C6F736528293B">
+					</CallbackNode>
+				</MenuItemNode>
+			</MenuNode>
+		</MenuBarNode>
+	</FrameNode>
+</RootNode>
+<RESOURCES INDEX="2">
+	<BITMAP ID="IDB_BITMAP1" FILENAME="open.bmp">
+	</BITMAP>
+</RESOURCES>

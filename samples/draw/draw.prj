@@ -1,0 +1,58 @@
+<RootNode Name="Classes" IsRemovable="0">
+	<FrameNode Name="MainFrame" IsRemovable="0" Title="My Application" Resizable="1" Width="400" Height="400" BackColor="FFFFFF" BaseClass="MdzFrame">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="7368617065732E52656D6F7665416C6C2854525545293B">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="536574436C69656E744374726C2870616E656C293B0D0A0D0A636F6C6F72203D204D647A436F6C6F723A3A4B5F5245443B">
+		</MethodNode>
+		<VarNode Name="color" IsRemovable="1" Type="MdzColor" ArraySize="0">
+		</VarNode>
+		<VarNode Name="graph" IsRemovable="1" Type="MdzGraphic" ArraySize="0">
+		</VarNode>
+		<MenuBarNode Name="menuBar" IsRemovable="1" Type="MdzMenuBar" ArraySize="0">
+			<MenuNode Name="color" IsRemovable="1" Caption="Color" Type="MdzMenu" ArraySize="0">
+				<MenuItemNode Name="red" IsRemovable="1" Caption="Red" Enabled="1" Checked="0" Type="MdzMenuItem" ArraySize="0">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="636F6C6F72203D204D647A436F6C6F723A3A4B5F5245443B0D0A">
+					</CallbackNode>
+				</MenuItemNode>
+				<MenuItemNode Name="green" IsRemovable="1" Caption="Green" Enabled="1" Checked="0" Type="MdzMenuItem" ArraySize="0">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="636F6C6F72203D204D647A436F6C6F723A3A4B5F475245454E3B">
+					</CallbackNode>
+				</MenuItemNode>
+				<MenuItemNode Name="blue" IsRemovable="1" Caption="Blue" Enabled="1" Checked="0" Type="MdzMenuItem" ArraySize="0">
+					<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="636F6C6F72203D204D647A436F6C6F723A3A4B5F424C55453B">
+					</CallbackNode>
+				</MenuItemNode>
+				<CallbackNode Name="OnClick" IsRemovable="1" Proto="" RetValue="void" Type="-842150451" Code="6D656E754261725F636F6C6F725F7265642E536574436865636B656428636F6C6F72203D3D204D647A436F6C6F723A3A4B5F524544293B0D0A6D656E754261725F636F6C6F725F677265656E2E536574436865636B656428636F6C6F72203D3D204D647A436F6C6F723A3A4B5F475245454E293B0D0A6D656E754261725F636F6C6F725F626C75652E536574436865636B656428636F6C6F72203D3D204D647A436F6C6F723A3A4B5F424C5545293B">
+				</CallbackNode>
+			</MenuNode>
+		</MenuBarNode>
+		<VarNode Name="p1" IsRemovable="1" Type="MdzPoint" ArraySize="0">
+		</VarNode>
+		<VarNode Name="p2" IsRemovable="1" Type="MdzPoint" ArraySize="0">
+		</VarNode>
+		<PanelNode Name="panel" IsRemovable="1" Left="10" Top="10" Width="100" Height="100" Enable="1" Border="0" BackColor="FFFFFF" Type="MdzPanel" ArraySize="0">
+			<CallbackNode Name="OnLeftButtonDown" IsRemovable="1" Proto="int x, int y" RetValue="void" Type="-842150451" Code="7031203D204D647A506F696E7428782C2079293B">
+			</CallbackNode>
+			<CallbackNode Name="OnMouseDrag" IsRemovable="1" Proto="int x, int y" RetValue="void" Type="-842150451" Code="696620282167726170682E497356616C69642829290D0A7B0D0A0967726170682E496E69742870616E656C293B0D0A0967726170682E536574447261774D6F6465284D647A477261706869633A3A4B5F4E4F54293B0D0A097032203D204D647A506F696E7428782C2079293B0D0A0967726170682E4472617752656374284D647A526563742870312C20703229293B090D0A7D0D0A656C73650D0A7B0D0A0967726170682E4472617752656374284D647A526563742870312C20703229293B0D0A097032203D204D647A506F696E7428782C2079293B0D0A0967726170682E4472617752656374284D647A526563742870312C20703229293B090D0A7D">
+			</CallbackNode>
+			<CallbackNode Name="OnLeftButtonUp" IsRemovable="1" Proto="int x, int y" RetValue="void" Type="-842150451" Code="67726170682E536574447261774D6F6465284D647A477261706869633A3A4B5F4E4F524D414C293B0D0A67726170682E536574436F6C6F7228636F6C6F72293B0D0A67726170682E46696C6C52656374284D647A526563742870312C20703229293B090D0A53686170652A20705368617065203D206E65772053686170653B0D0A7053686170652D3E7263203D204D647A526563742870312C207032293B0D0A7053686170652D3E636F6C6F72203D20636F6C6F723B0D0A7368617065732E41646428705368617065293B0D0A0D0A67726170682E52656C6561736528293B">
+			</CallbackNode>
+			<CallbackNode Name="OnPaint" IsRemovable="1" Proto="MdzGraphic& graphic" RetValue="void" Type="-842150451" Code="666F7228696E742069203D20303B2069203C207368617065732E476574436F756E7428293B20692B2B290D0A7B0D0A0953686170652A20705368617065203D202853686170652A297368617065732E47657441742869293B0D0A09677261706869632E536574436F6C6F72287053686170652D3E636F6C6F72293B0D0A09677261706869632E46696C6C52656374287053686170652D3E7263293B0D0A7D">
+			</CallbackNode>
+		</PanelNode>
+		<VarNode Name="shapes" IsRemovable="1" Type="MdzVector" ArraySize="0">
+		</VarNode>
+	</FrameNode>
+	<ClassNode Name="Shape" IsRemovable="1" BaseClass="MdzObject">
+		<MethodNode Name="Done" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<MethodNode Name="Init" IsRemovable="0" Proto="" RetValue="void" Type="0" Code="">
+		</MethodNode>
+		<VarNode Name="color" IsRemovable="1" Type="MdzColor" ArraySize="0">
+		</VarNode>
+		<VarNode Name="rc" IsRemovable="1" Type="MdzRect" ArraySize="0">
+		</VarNode>
+	</ClassNode>
+</RootNode>
+<RESOURCES INDEX="1">
+</RESOURCES>

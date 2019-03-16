@@ -1,0 +1,628 @@
+
+MdzBitmap
+	GetHandle(),1
+	MapColor(COLORREF clOldColor, COLORREF clNewColor),1
+	MapColor(COLORREF clNewColor),1
+	GetSize(),1
+	GetMask(COLORREF clTransparent),1
+	Clone(),1
+
+MdzBounds
+
+MdzButton:MdzCtrl
+	SetCaption(LPSTR strCaption),1
+	SetBitmap(MdzBitmap bitmap),1
+	SetOnClick(MdzCbk1* lpFunc),1
+	SetToolTips(LPSTR strToolTips),1
+
+MdzClassFactory
+	CreateObject(LPSTR strClassName),2
+	GetFactory(LPSTR lpClassName),2
+	NewObject(),4
+
+MdzColor
+	ChooseColor(),1
+	GetSysColor(),2
+
+MdzComboBox:MdzCtrl
+	SetSelItem(LPSTR strItem),1
+	GetSelItem(),1
+	GetItemAt(int iIndex),1
+	SetOnSelChange(MdzCbk1* lpFunc),1
+	AddItems(MdzStrVector& vector),1
+	AddItem(LPSTR strItem, LPVOID pArg = NULL),1
+	OnSelChange(MdzCbk1* lpFunc),1
+	RemoveAllItems(),1
+	GetItemCount(),1
+	GetSelIndex(),1
+	SetOnDropDown(MdzCbk1* lpFunc),1
+	SetSelIndex(int iIndex),1
+	GetDataAt(int iIndex),1
+	GetDataAt(int iIndex),1
+
+MdzContainer:MdzCtrl
+	Pack(int xPad = 0, int yPad = 0),1
+	OnCreate(),4
+	Add(MdzCtrl& ctrl, MdzSize& size),1
+	Add(MdzCtrl& ctrl, MdzBounds& bounds),1
+	Add(MdzCtrl& ctrl),1
+	GetClientRect(),1
+
+MdzCtrl:MdzObject
+	HasFocus(),1
+	IsEnabled(),1
+	GetParent(),1
+	SetParent(MdzCtrl* lpParent),1
+	GetFont(),1
+	SetBounds(MdzBounds& bounds),1
+	SetBounds(int left, int top, int width, int height),1
+	GetBounds(),1
+	SetAutoDelete(BOOL bAutoDelete),1
+	GetHandle(),1
+	SetLocation(int left, int top),1
+	SetVisible(BOOL bIsVisible),1
+	SetSize(int width, int height),1
+	SetEnabled(BOOL bIsEnabled),1
+	SetFont(MdzFont& font),1
+	RequestFocus(),1
+	Update(),1
+
+MdzDialog:MdzContainer
+	OnFocus(UINT bGotFocus),4
+	Execute(),1
+	Close(int retCode),1
+	SetDefaultButton(MdzButton& button),1
+	SetTitle(LPSTR strTitle),1
+
+MdzDockBar:MdzCtrl
+	SetToolBarVisible(MdzToolBar &toolbar, BOOL bIsVisible),1
+	AddToolBar(MdzToolBar &toolbar, BOOL bBreak = FALSE),1
+
+MdzFileDialog
+	GetFullPathName(),1
+	SetFileName(LPSTR strFileName),1
+	ShowSave(),1
+	SetDefaultExtension(LPSTR strDefaultExt),1
+	ShowOpen(),1
+	SetInitDirectory(LPSTR strInitDir),1
+	GetFileName(),1
+	GetCurrentDirectory(),1
+	AddFilter(LPSTR strName, LPSTR strFilterExtention),1
+
+MdzFont
+	GetDefaultGuiFont(),2
+	ToString(),1
+	ChooseFont(),1
+	InitClass(),2
+	GetHandle(),1
+	MeasureString(LPSTR strText),1
+
+MdzFrame:MdzContainer
+	OnClose(),4
+	RemoveEventHandler(MdzEventHandler* lpEvtHandler),1
+	Close(),1
+	Close(),4
+	SetStatusBar(MdzStatusBar& statusBar),1
+	OnCreate(),4
+	SetBackColor(COLORREF backColor),1
+	SetCursor(WORD iResId),1
+	SetIcon(WORD iResId),1
+	InitApp(),2
+	GetMainFrame(),2
+	Run(LPSTR strCmdLine, int iCmdShow = SW_SHOW),1
+	OnFocus(UINT bGotFocus),4
+	OpenHelpFile(LPSTR strFileName, LPSTR strKeyWord = NULL),1
+	Redraw(BOOL bErase = TRUE),1
+	AddEventHandler(MdzEventHandler* lpEvtHandler),1
+	SetDockBar(MdzDockBar& rebar),1
+	SetMenuBar(MdzMenuBar &menuBar),1
+	SetClientCtrl(MdzCtrl& ctrl),1
+	AddShortcut(UINT iKeyChanger, char character, MdzCbk1* lpFunc),1
+	SetTitle(LPSTR strTitle),1
+	OpenHtmlHelpFile(LPSTR strFileName, LPSTR strKeyWord = NULL),1
+	SetResizable(BOOL bIsResizable),1
+	GetCmdLine(),1
+
+MdzGraphic
+	CopyArea(MdzRect rc),1
+	SetColor(COLORREF color),1
+	SetDrawMode(UINT iMode),1
+	DrawString(LPSTR str, MdzRect rc),1
+	DrawString(LPSTR str, int x, int y),1
+	DrawRect(MdzRect rc),1
+	SetFont(MdzFont& font),1
+	DrawOval(MdzRect rc),1
+	DrawBitmap(MdzBitmap& bitmap, int x, int y),1
+	FillRect(MdzRect rc),1
+	FillOval(MdzRect rc),1
+	GetHandle(),1
+	DrawLine(MdzRect rc),1
+	DrawBitmapTransparent(MdzBitmap& bitmap, int x, int y, COLORREF clTransparent = -1),1
+	DrawBitmapDisabled(MdzBitmap& bitmap, int x, int y),1
+	IsValid(),1
+	Init(HDC hDC),1
+	Init(MdzCtrl& ctrl),1
+	Release(),1
+	DrawSingleString(LPSTR str, MdzRect rc, UINT iTextAlignment = K_LEFT),1
+
+MdzLabel:MdzCtrl
+	SetBorder(BOOL bHasBorder),1
+	SetAlignment(UINT iAlignment),1
+	SetFont(MdzFont& font),1
+	SetTextColor(COLORREF clrColor),1
+	GetText(),1
+	SetBackColor(COLORREF color),1
+	SetText(LPSTR strText),1
+
+MdzListBox:MdzCtrl
+	SetSelItem(LPSTR strItem),1
+	GetDataAt(int iIndex),1
+	SetOnDblClick(MdzCbk1* lpFunc),1
+	InsertItemAt(LPSTR strItem, UINT iIndex, LPVOID pArg = NULL),1
+	GetSelIndex(),1
+	RemoveAllItems(),1
+	RemoveItemAt(int iIndex),1
+	GetItemAt(int iIndex),1
+	AddItem(LPSTR strItem, LPVOID pArg = NULL),1
+	IsItemSelected(UINT iIndex),1
+	GetSelItem(),1
+	GetItemCount(),1
+	FindItem(LPSTR strItem),1
+	AddItems(MdzStrVector &vector),1
+	SetOnSelChange(MdzCbk1* lpFunc),1
+	SetSelIndex(int iIndex),1
+	SelectAll(BOOL bIsSelected),1
+	SetSorted(BOOL bIsSorted),1
+	SetMultiSelection(BOOL bIsMultiSel),1
+	OnDblClick(MdzCbk1* lpFunc),1
+
+MdzMdiChild:MdzContainer
+	SetClientCtrl(MdzCtrl& ctrl),1
+	SetTitle(LPSTR strTitle),1
+	SetMaximized(BOOL bIsMaximized),1
+	OnSize(int width, int height),4
+	OnFocus(UINT bGotFocus),4
+	SetBackColor(MdzColor backColor),1
+
+MdzMdiCtrl:MdzCtrl
+	TileHorizontally(),1
+	CreateChild(MdzMdiChild* lpChild),1
+	Cascade(),1
+	TileVertically(),1
+	SetWndMenu(MdzMenu& menu),1
+	GetActiveChild(),1
+
+MdzMenuBar
+	Add(MdzMenu& menu, LPSTR strCaption),1
+	GetHandle(),1
+
+MdzMenu
+	AddSeparator(),1
+	FindItem(LPSTR strCaption),1
+	Add(MdzMenu& menu, LPSTR strCaption),1
+	Add(MdzMenuItem& item, LPSTR strCaption, MdzCbk1* pFunc = NULL),1
+	Track(MdzCtrl& ctrl, int x, int y),1
+	SetOnClick(MdzCbk1* lpFunc),1
+	GetHandle(),1
+	GetItemCount(),1
+	AddItem(LPSTR strCaption, MdzCbk1* pFunc = NULL),1
+
+MdzMenuItem:MdzObject
+	GetCaption(),1
+	SetChecked(BOOL bIsChecked),1
+	SetOnClick(MdzCbk1* lpFunc),1
+	SetEnabled(BOOL bIsEnabled),1
+	IsChecked(),1
+	IsEnabled(),1
+	SetCaption(LPSTR strCaption),1
+	SetShortcut(UINT iKeyChanger, char character),1
+	SetBitmap(MdzBitmap bitmap),1
+
+MdzOdbcDriver
+	Disconnect(),1
+	IsConnected(),1
+	Connect(LPSTR strDbName, LPSTR strUserName, LPSTR strPassword),1
+	ExecuteQuery(LPSTR strQuery, MdzSqlQueryResult& result),1
+
+MdzPanel:MdzContainer
+	SetOnSize(MdzCbk2* lpFunc),1
+	SetCursor(WORD iResId),1
+	SetBorder(BOOL bHasBorder),1
+	SetOnMouseMove(MdzCbk2* lpFunc),1
+	Redraw(BOOL bErase = TRUE),1
+	SetOnPaint(MdzCbk4* lpFunc),1
+	OnSize(MdzCbk2* lpFunc),1
+	SetOnLeftButtonUp(MdzCbk2* lpFunc),1
+	SetHorzScrollbar(UINT iPageWidth, UINT iIncrement),1
+	SetVertScrollbar(UINT iPageHeight, UINT iIncrement),1
+	OnPaint(MdzCbk4* lpFunc),1
+	SetBackColor(COLORREF backColor),1
+	SetOnRightButtonUp(MdzCbk2* lpFunc),1
+	GetPageOrigin(),1
+	SetOnLeftButtonDown(MdzCbk2* lpFunc),1
+	SetOnKeyUp(MdzCbk6* lpFunc),1
+	SetOnRightButtonDown(MdzCbk2* lpFunc),1
+	SetOnKeyDown(MdzCbk6* lpFunc),1
+	SetOnMouseDrag(MdzCbk2* lpFunc),1
+
+MdzRect:tagRECT
+	Inflate(int dx, int dy),1
+	Height(),1
+	Width(),1
+	Contains(int x, int y),1
+
+MdzSlider:MdzCtrl
+	SetOnSelChange(MdzCbk1* lpFunc),1
+	SetValue(int iValue),1
+	GetValue(),1
+	SetBorder(BOOL bHasBorder),1
+	SetRange(int iMin, int iMax),1
+
+MdzSqlQueryResult
+	GetString(int iColIdx),1
+	GetType(int iColIdx),1
+	GetNbColumn(),1
+	GetFloat(int iColIdx),1
+	GetInteger(int iColIdx),1
+	GetColumnName(int iColIdx),1
+	GetColumnIdxFromName(LPSTR strName),1
+	GetNext(),1
+	ConvertToSqlFloat(float val),2
+
+MdzStream
+	Close(),1
+	ReadText(),1
+	GetDesc(),1
+	Write(LPVOID lpBuffer, int iBuffSize),1
+	WriteText(LPSTR strText),1
+	GetFileSize(),1
+	Read(LPVOID lpBuffer, int iBuffSize),1
+	Open(LPSTR lpFileName, int iMode),1
+
+MdzString:MdzObject
+	ExtractFileName(),1
+	Tokenize(LPSTR strToken, MdzStrVector& vector),1
+	Compare(LPSTR lpStr),1
+	ToInt(),1
+	GetSubString(int iStartIdx, int iLength = -1),1
+	Load(UINT iResId, HMODULE hModule = NULL),2
+	ExtractPath(),1
+	Equals(LPSTR lpStr),1
+	ToUpper(),1
+	GetIndexOf(LPSTR str, int iStartIdx = 0),1
+	GetLength(),1
+	ToIntHex(),1
+	Dump(),1
+	ToLower(),1
+	Format(LPSTR fmt, ...),2
+	Alloc(UINT iSize),1
+	GetCharAt(UINT iIndex),1
+
+MdzSystem
+	GetShortPath(LPSTR strPath),2
+	DebugPrint(char* fmt, ...),2
+	RunProcess(LPSTR strCmdLine, BOOL bWaitEnd = FALSE),2
+	GetScreenSize(),2
+	GetTime(),2
+	FindFile(MdzStrVector& vector, LPSTR strFilter),2
+	HideCursor(),2
+	GetDate(),2
+	GetExePath(),2
+	GetCurrentTimeMillis(),2
+	ShowCursor(),2
+	SortVector(MdzVector& vector, MdzSortFunction func),2
+	SortStrVector(MdzStrVector& vector),2
+	CopyToClipboard(LPSTR strText),2
+	GetExeName(),2
+
+MdzTable:MdzCtrl
+	AddItem(MdzTableItem* lpItem),1
+	GetItemAt(int iIndex),1
+	RemoveItemAt(int iIndex, BOOL bAutoDelete = TRUE),1
+	RemoveAllItems(BOOL bAutoDelete = TRUE),1
+	GetSelIndex(),1
+	AddColumn(LPSTR strColName, int iColWidth, int iAlignment = K_LEFT),1
+	GetSelItem(),1
+	GetItemCount(),1
+	AddColumn(LPSTR strColName, int iColWidth, int iAlignment = K_LEFT),1
+	AddItem(MdzTableItem* lpItem),1
+	GetItemCount(),1
+	RemoveItemAt(int iIndex, BOOL bAutoDelete = TRUE),1
+	GetSelIndex(),1
+	GetItemAt(int iIndex),1
+	GetSelItem(),1
+	RemoveAllItems(BOOL bAutoDelete = TRUE),1
+
+MdzTableItem:MdzObject
+	GetTextColor(int iNumCol),4
+	GetBackColor(int iNumCol),4
+	GetColumnData(int iNumCol),4
+
+MdzTextArea:MdzCtrl
+	SetOnFocus(MdzCbk6* pFunc),1
+	CanPaste(),1
+	SetOnSelChange(MdzCbk1* pFunc),1
+	LoadFromFile(LPSTR strFileName),1
+	GetStartIndex(),1
+	ResetModifiedFlag(),1
+	ShowFindDialog(),1
+	GetLineAt(UINT iIndex),1
+	IsModified(),1
+	GetSelText(),1
+	Append(LPSTR strText),1
+	SetEditable(BOOL bIsEditable),1
+	SetSelection(int iStartIndex, int iStopIndex),1
+	Copy(),1
+	GetLineCount(),1
+	SetTabSize(UINT iTabSize),1
+	Paste(),1
+	Paste(),1
+	Cut(),1
+	GetText(),1
+	ReplaceSelection(LPSTR strText),1
+	SetText(LPSTR strText),1
+	OnChar(MdzCbk6* lpFunc),1
+	SetOnChar(MdzCbk6* lpFunc),1
+	ScrollToEnd(),1
+	SetOnEnter(MdzCbk1* lpFunc),1
+	SetOnLButtonDblClick(MdzCbk2* lpFunc),1
+	GetPosFromIndex(UINT iIndex, MdzPoint& pt),1
+	GetIndexFromPos(int x, int y),1
+	GetLineFromIndex(UINT iIndex),1
+
+MdzTextField:MdzCtrl
+	SetText(LPSTR strText),1
+	GetText(),1
+	SetPassword(BOOL bIsPassword),1
+	SetMaxChar(UINT iMaxChar),1
+	SetDigitOnly(BOOL bIsNumber),1
+	Select(),1
+
+MdzTimer
+	Stop(),1
+	GetDelay(),1
+	Start(),1
+	IsRunning(),1
+	SetDelay(UINT delay),1
+	SetOnTimeout(MdzCbk1* lpFunc),1
+
+MdzToolBar:MdzCtrl
+	AddButton(MdzToolButton& btn, MdzBitmap bitmap, UINT iStyle = MdzToolButton::K_BUTTON),1
+	AddSeparator(),1
+	AddCtrl(MdzCtrl& ctrl, int iWidth, int iHeight),1
+
+MdzToolButton:MdzObject
+	SetAutoDelete(BOOL bAutoDelete),1
+	IsChecked(),1
+	IsEnabled(),1
+	SetOnClick(MdzCbk1* lpFunc),1
+	SetEnabled(BOOL bIsEnabled),1
+	SetChecked(BOOL bIsChecked),1
+	SetToolTips(LPSTR strToolTips),1
+
+MdzVector
+	InsertAt(MdzObject* lpElt, UINT iIndex),1
+	RemoveAll(BOOL bAutoDelete = FALSE),1
+	Remove(MdzObject* lpElt, BOOL bAutoDelete = FALSE),1
+	Add(MdzObject* lpElt),1
+	IsEmpty(),1
+	GetCount(),1
+	RemoveAt(UINT iIndex, BOOL bAutoDelete = FALSE),1
+	Find(MdzObject* lpElt),1
+	GetAt(UINT iIndex),1
+	GetCount(),1
+	Add(MdzObject* lpElt),1
+	GetAt(UINT iIndex),1
+	RemoveAt(UINT iIndex, BOOL bAutoDelete = FALSE),1
+	RemoveAll(BOOL bAutoDelete = FALSE),1
+	IsEmpty(),1
+	Find(MdzObject* lpElt),1
+	Remove(MdzObject* lpElt, BOOL bAutoDelete = FALSE),1
+	InsertAt(MdzObject* lpElt, UINT iIndex),1
+
+MdzSocket
+	CatchEvent(long lEvent),1
+	Close(),4
+	InitClass(),2
+	OnWSAEvent(MdzEvent& evt),4
+
+MdzSocketClient:MdzSocket
+	IsConnected(),1
+	Connect(LPSTR strHostName, UINT iPortNumber),1
+	SetOnDataReceived(MdzCbk1* lpFunc),1
+	SendBuffer(LPBYTE buffer, UINT buffSize),1
+	GetBuffer(LPBYTE buffer, UINT buffSize),1
+	SendData(LPSTR buffer),1
+	SetOnConnectionClosed(MdzCbk1* lpFunc),1
+	GetData(),1
+
+MdzSocketClientSync:MdzSocketClient
+	WaitForData(UINT iTimeout),1
+
+MdzSocketServer:MdzSocket
+	SetOnIncomingConnection(MdzCbk1* lpFunc),1
+	Listen(UINT iPort, UINT iMaxPendingConnection = 1),1
+	Accept(),1
+
+MdzMailSender
+	SetSubject(LPSTR strSubject),1
+	SetSmtpServer(LPSTR strHost),1
+	SetTimeout(UINT iTimeout),1
+	SetFrom(LPSTR strFrom),1
+	Send(),1
+	SetBody(LPSTR strBody),1
+	SetTo(LPSTR strTo),1
+
+MdzStatusBar:MdzCtrl
+	SetText(LPSTR strText),1
+
+MdzTabCtrl:MdzCtrl
+	SetSelIndex(UINT iIndex),1
+	AddTab(LPSTR strCaption, MdzCtrl& ctrl),1
+	GetSelIndex(),1
+	SetSelIndex(UINT iIndex),1
+
+MdzEvent
+	ProcessDefault(HWND hWnd, HWND hMdiClient = NULL),1
+
+MdzEventHandler:MdzObject
+
+MdzStdDialog
+	ShowConfirm(LPSTR strText, LPSTR strTitle = NULL),2
+	ShowInput(LPSTR strText = NULL, LPSTR strTitle = NULL),2
+	ShowMessage(LPSTR strText, LPSTR strTitle = NULL),2
+
+MdzSize:tagSIZE
+
+MdzPoint:tagPOINT
+	ToScreen(MdzCtrl& ctrl),1
+	ToClient(MdzCtrl &ctrl),1
+
+MdzKey
+
+MdzPicture:MdzCtrl
+	Clear(),1
+	SetBitmap(MdzBitmap bitmap),1
+	SetBorder(BOOL bHasBorder),1
+
+MdzCursor
+
+MdzBaseRegister
+	GetDwordValue(LPSTR strPath, LPSTR strName, DWORD& dwValue),2
+	EnumKey(LPSTR strPath, MdzStrVector& vector),2
+	SetDwordValue(LPSTR strPath, LPSTR strName, DWORD dwValue),2
+	SetStringValue(LPSTR strPath, LPSTR strName, LPSTR strValue),2
+	GetStringValue(LPSTR strPath, LPSTR strName, MdzString& strValue),2
+
+MdzCrypto
+	ComputePublicKey(LPBYTE buffer, UINT bufferLength, MdzString strPrivateKey),2
+
+MdzTreeCtrl:MdzCtrl
+	GetNodeAt(int x, int y),1
+	SetOnRightClick(MdzCbk2* lpFunc),1
+	GetSelNode(),1
+	OnRightClick(MdzCbk2* lpFunc),1
+	SetOnSelChange(MdzCbk1* lpFunc),1
+	GetRootNode(),1
+	OnSelChange(MdzCbk1* lpFunc),1
+	SetRootNode(MdzTreeNode* lpRootNode),1
+
+MdzTreeNode:MdzObject
+	IsFirstChild(),1
+	MoveDown(),1
+	MoveUp(),1
+	GetChildCount(),1
+	GetChildPos(),1
+	SetExpanded(BOOL bIsExpanded),1
+	Select(),1
+	Rename(),1
+	GetNext(),1
+	IsLastChild(),1
+	GetText(),1
+	SortChildren(),1
+	GetPosition(),1
+	SetText(LPSTR strText),1
+	GetChildAt(UINT iIndex),1
+	Add(MdzTreeNode* lpNode),1
+	IsLeaf(),1
+	InsertAt(MdzTreeNode* pNode, UINT idx),1
+	SetBitmap(MdzBitmap bitmap),1
+	Remove(),1
+	GetParent(),1
+	GetTreeCtrl(),1
+
+MdzLayout
+	Add(MdzCtrl& ctrl, int width, int height, int flag = K_RIGHT, int spacing = 10),1
+	Save(),1
+	Restore(),1
+	AddBorder(int spacing = 10, LPSTR strTitle = NULL),1
+	AddLabel(LPSTR strText, int width, int height, int flag = K_RIGHT, int spacing = 10),1
+	GetBoundaryRect(),1
+
+MdzCheckBox:MdzCtrl
+	SetCaption(LPSTR strCaption),1
+	SetChecked(BOOL bIsChecked),1
+	SetOnClick(MdzCbk1* lpFunc),1
+	IsChecked(),1
+
+MdzRadioButton:MdzCtrl
+	SetCaption(LPSTR strCaption),1
+	SetChecked(BOOL bIsChecked),1
+	SetOnClick(MdzCbk1* lpFunc),1
+	IsChecked(),1
+
+MdzDirListBox:MdzListBox
+	GetPath(),1
+	SetDrive(LPSTR strDrive),1
+
+MdzDriveComboBox:MdzComboBox
+	GetDrive(),1
+
+MdzDialogEx:MdzDialog
+
+MdzAudioStream
+	Open(PAVIFILE pFile),1
+	Play(LONG lTime),1
+	IsPlaying(),1
+	GetElapsedTime(),1
+	GetDuration(),1
+	Close(),1
+	SetOnEndReached(MdzCbk1* lpFunc),1
+	Stop(),1
+
+MdzVideoStream
+	Close(),1
+	DrawFrame(MdzGraphic& graphic, int x, int y, LONG lFrame),1
+	GetFrameCount(),1
+	Open(PAVIFILE pFile),1
+	GetTimeFromFrame(LONG lFrame),1
+	GetFrameFromTime(LONG lTime),1
+	GetDuration(),1
+	GetSize(),1
+
+MdzAviFile
+	GetVideoStream(MdzVideoStream& videoStream),1
+	Open(LPSTR strFileName),1
+	Close(),1
+	GetAudioStream(MdzAudioStream& audioStream),1
+
+MdzXmlWriter
+	WriteEndElement(),1
+	WriteStartElement(LPSTR strName),1
+	Close(),1
+	WriteAttribute(LPSTR strName, LPSTR strValue),1
+
+MdzXmlParser
+	Parse(),1
+	Open(LPSTR strFileName),1
+
+MdzXmlElement:MdzObject
+	GetChildByName(LPSTR strName),1
+	GetPosition(),1
+	GetAttribute(LPSTR strName),1
+	GetName(),1
+	GetParent(),1
+	GetAttributeCount(),1
+	GetChildAt(UINT iIndex),1
+	GetChildCount(),1
+	AddChild(MdzXmlElement* pElt),1
+	GetAttributeAt(UINT iIndex),1
+	AddAttribute(MdzXmlAttribute* pAttribute),1
+
+MdzXmlAttribute:MdzObject
+	GetValue(),1
+	GetName(),1
+
+MdzObject
+	IsInstanceOf(LPSTR strClass),4
+	GetClass(),4
+
+MdzHorzDividerPanel:MdzContainer
+	SetRightCtrl(MdzCtrl &ctrl),1
+	SetLeftCtrl(MdzCtrl& ctrl, UINT iLeftCtrlWidth = 100),1
+
+MdzVertDividerPanel:MdzContainer
+	Ctrl(MdzCtrl &ctrl),1
+	Ctrl(MdzCtrl& ctrl, UINT iBottomCtrlHeight = 100),1
+	SetBottomCtrl(MdzCtrl& ctrl, UINT iBottomCtrlHeight = 100),1
+	SetTopCtrl(MdzCtrl &ctrl),1
